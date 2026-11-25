@@ -1,3 +1,43 @@
-<main class="container">
-  <router-outlet />
-</main>
+<div class="app-shell">
+  <header>
+    <nav class="navbar navbar-expand app-navbar" aria-label="Main navigation">
+      <div class="container-fluid app-navbar__inner">
+        <a class="navbar-brand app-brand" routerLink="/" aria-label="Recipes home">
+          <span class="app-brand__mark" aria-hidden="true">R</span>
+          <span>Recipes</span>
+        </a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              ariaCurrentWhenActive="page"
+            >
+              Home
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main" id="main-content">
+    <router-outlet />
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <nav aria-label="Footer navigation">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a class="nav-link px-2" routerLink="/">Home</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="text-center app-footer__copyright">© {{ currentYear }} Recipes</p>
+    </div>
+  </footer>
+</div>

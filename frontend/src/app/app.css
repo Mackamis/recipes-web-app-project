@@ -1,0 +1,90 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-navbar {
+  background-color: var(--color-ochre);
+  border-bottom: 1px solid var(--color-burnt-sienna);
+}
+
+.app-navbar__inner {
+  margin-inline: auto;
+  max-width: 90rem;
+}
+
+.app-brand {
+  align-items: center;
+  color: var(--color-text);
+  display: inline-flex;
+  font-weight: 700;
+  gap: var(--space-2);
+}
+
+.app-brand:hover {
+  color: var(--color-text);
+}
+
+.app-brand__mark {
+  align-items: center;
+  background-color: var(--color-card-cream);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  display: inline-flex;
+  height: 2rem;
+  justify-content: center;
+  width: 2rem;
+}
+
+.app-navbar .nav-link {
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link.active {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.app-navbar .nav-link.active {
+  font-weight: 600;
+}
+
+.app-main {
+  flex: 1;
+  margin-inline: auto;
+  max-width: var(--container-width);
+  padding: var(--space-5) var(--space-4);
+  width: 100%;
+}
+
+.app-footer {
+  background-color: var(--color-dust);
+  border-top: 1px solid var(--color-burnt-sienna);
+  margin-top: auto;
+  padding: var(--space-5) var(--space-4);
+}
+
+.app-footer .nav {
+  border-color: var(--color-burnt-sienna) !important;
+}
+
+.app-footer .nav-link {
+  color: var(--color-text-muted);
+}
+
+.app-footer .nav-link:hover {
+  color: var(--color-text);
+}
+
+.app-footer__copyright {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}

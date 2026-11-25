@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "wine-app": {
+    "recipe-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -84,10 +84,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wine-app:build:production"
+              "buildTarget": "recipe-app:build:production"
             },
             "development": {
-              "buildTarget": "wine-app:build:development"
+              "buildTarget": "recipe-app:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -3,19 +3,22 @@
     <nav class="navbar navbar-expand app-navbar" aria-label="Main navigation">
       <div class="container-fluid app-navbar__inner">
         <a class="navbar-brand app-brand" routerLink="/" aria-label="Recipes home">
-          <span class="app-brand__mark" aria-hidden="true">R</span>
+          <img class="app-brand__logo" src="/recipes-logo.png" alt="" aria-hidden="true" />
           <span>Recipes</span>
         </a>
 
         <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
           <li class="nav-item">
+            <a class="button app-navbar__action" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="button app-navbar__action" routerLink="/browse">Browse</a>
           </li>
           <li class="nav-item">
-            <a class="button button--primary app-navbar__action" routerLink="/register">Register</a>
+            <a class="button app-navbar__action" routerLink="/register">Register</a>
           </li>
           <li class="nav-item">
-            <a class="button app-navbar__action" routerLink="/login">Login</a>
+            <a class="button app-navbar__action app-navbar__action--login" routerLink="/login">Login</a>
           </li>
         </ul>
       </div>
@@ -29,9 +32,18 @@
   <footer class="app-footer">
     <div class="container">
       <nav aria-label="Footer navigation">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <ul class="nav justify-content-center border-bottom pb-2 mb-2">
           <li class="nav-item">
             <a class="nav-link px-2" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" routerLink="/browse">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" routerLink="/register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" routerLink="/login">Login</a>
           </li>
         </ul>
       </nav>

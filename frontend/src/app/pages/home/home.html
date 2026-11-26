@@ -1,1 +1,108 @@
-<p>home works!</p>
+<div class="home-page">
+  <header class="welcome">
+    <p class="welcome__eyebrow">A LITTLE INSPIRATION FOR YOUR KITCHEN</p>
+    <h1>Welcome back, ready to start cooking again?</h1>
+    <p class="welcome__copy">
+      Find a new favorite, revisit something delicious, or make the most of what’s already in your pantry.
+    </p>
+  </header>
+
+  <section class="recipe-section" aria-labelledby="latest-heading">
+    <div class="recipe-section__heading">
+      <div>
+        <p class="recipe-section__eyebrow">FRESH FROM THE KITCHEN</p>
+        <h2 id="latest-heading">Latest recipes</h2>
+      </div>
+      <a
+        class="recipe-section__link"
+        routerLink="/browse"
+        [queryParams]="{ collection: 'latest' }"
+        aria-label="See all latest recipes"
+      >
+        See all <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="recipe-grid">
+      @for (recipe of latestRecipes; track recipe.name) {
+        <article class="recipe-card">
+          <div class="recipe-card__image">
+            <img [src]="recipe.imageUrl" alt="" loading="lazy" decoding="async" />
+            <span class="recipe-card__tag">New</span>
+          </div>
+          <div class="recipe-card__body">
+            <h3>{{ recipe.name }}</h3>
+            <p>{{ recipe.description }}</p>
+            <span class="recipe-card__meta">{{ recipe.time }} min <span aria-hidden="true">·</span> {{ recipe.category }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="recipe-section" aria-labelledby="popular-heading">
+    <div class="recipe-section__heading">
+      <div>
+        <p class="recipe-section__eyebrow">LOVED BY HOME COOKS</p>
+        <h2 id="popular-heading">Most popular</h2>
+      </div>
+      <a
+        class="recipe-section__link"
+        routerLink="/browse"
+        [queryParams]="{ collection: 'popular' }"
+        aria-label="See all popular recipes"
+      >
+        See all <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="recipe-grid">
+      @for (recipe of popularRecipes; track recipe.name) {
+        <article class="recipe-card">
+          <div class="recipe-card__image">
+            <img [src]="recipe.imageUrl" alt="" loading="lazy" decoding="async" />
+            <span class="recipe-card__rating" aria-label="Rating 4.9 out of 5">★ 4.9</span>
+          </div>
+          <div class="recipe-card__body">
+            <h3>{{ recipe.name }}</h3>
+            <p>{{ recipe.description }}</p>
+            <span class="recipe-card__meta">{{ recipe.time }} min <span aria-hidden="true">·</span> {{ recipe.category }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="recipe-section" aria-labelledby="pantry-heading">
+    <div class="recipe-section__heading">
+      <div>
+        <p class="recipe-section__eyebrow">MAKE THE MOST OF WHAT YOU HAVE</p>
+        <h2 id="pantry-heading">From your pantry</h2>
+      </div>
+      <a
+        class="recipe-section__link"
+        routerLink="/browse"
+        [queryParams]="{ collection: 'pantry' }"
+        aria-label="See all recipes from your pantry"
+      >
+        See all <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="recipe-grid">
+      @for (recipe of pantryRecipes; track recipe.name) {
+        <article class="recipe-card">
+          <div class="recipe-card__image">
+            <img [src]="recipe.imageUrl" alt="" loading="lazy" decoding="async" />
+            <span class="recipe-card__tag">Pantry pick</span>
+          </div>
+          <div class="recipe-card__body">
+            <h3>{{ recipe.name }}</h3>
+            <p>{{ recipe.description }}</p>
+            <span class="recipe-card__meta">{{ recipe.time }} min <span aria-hidden="true">·</span> {{ recipe.category }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+</div>

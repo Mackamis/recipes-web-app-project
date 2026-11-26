@@ -31,15 +31,11 @@
   color: var(--color-text);
 }
 
-.app-brand__mark {
-  align-items: center;
-  background-color: var(--color-card-cream);
+.app-brand__logo {
   border-radius: var(--radius);
-  color: var(--color-text);
-  display: inline-flex;
-  height: 2rem;
-  justify-content: center;
-  width: 2rem;
+  height: 2.5rem;
+  object-fit: cover;
+  width: 2.5rem;
 }
 
 .app-navbar .nav-link {
@@ -62,6 +58,23 @@
   white-space: nowrap;
 }
 
+.app-navbar .app-navbar__action {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text);
+}
+
+.app-navbar .app-navbar__action:hover:not(:disabled) {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.app-navbar .app-navbar__action--login {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
 .app-main {
   flex: 1;
   margin-inline: auto;
@@ -74,7 +87,7 @@
   background-color: var(--color-dust);
   border-top: 1px solid var(--color-burnt-sienna);
   margin-top: auto;
-  padding: var(--space-5) var(--space-4);
+  padding: var(--space-3) var(--space-4);
 }
 
 .app-footer .nav {

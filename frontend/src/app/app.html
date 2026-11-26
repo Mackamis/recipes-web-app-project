@@ -7,17 +7,15 @@
           <span>Recipes</span>
         </a>
 
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              routerLink="/"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              ariaCurrentWhenActive="page"
-            >
-              Home
-            </a>
+            <a class="button app-navbar__action" routerLink="/browse">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="button button--primary app-navbar__action" routerLink="/register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="button app-navbar__action" routerLink="/login">Login</a>
           </li>
         </ul>
       </div>
